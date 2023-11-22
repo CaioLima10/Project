@@ -8,8 +8,8 @@ interface ITitleProps{
 export default function Title(props : ITitleProps) {
   return (
     <div>
-        <h1>{props.title}</h1>
-        <h1>{props.subtitle}</h1>
+        <h1 className={` font-black text-3xl `}>{props.title}</h1>
+        <h1 className={` font-light text-sm text-gray-800 `}>{props.subtitle}</h1>
     </div>
   )
 }
