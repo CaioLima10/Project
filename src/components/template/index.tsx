@@ -11,12 +11,14 @@ interface ITemplateLayoutProps{
 
 export default function TemplateLayout(props : ITemplateLayoutProps) {
   return (
-    <div>
+    <div className={`flex h-screen w-screen`}>
         <Menu/>
-        <Header title={props.title} subtitle={props.subtitle}/>
-        <Content>
-            { props.children }
-        </Content>
+        <div className={`flex flex-col p-7 w-full bg-gray-400`}>
+          <Header title={props.title} subtitle={props.subtitle}/>
+          <Content>
+              { props.children }
+          </Content>
+        </div>
     </div>
   )
 }
