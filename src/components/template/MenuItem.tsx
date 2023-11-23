@@ -2,7 +2,6 @@ import Link from "next/link"
 
 interface IMenuItemProps{
     url?: string
-    className?: string
     text: string
     icon: React.ReactNode
     onClick?: (event: any) => void
@@ -10,18 +9,18 @@ interface IMenuItemProps{
 
 export default function MenuItem(props: IMenuItemProps) {
 
+
   const RenderContentLink = () => {
     return(
-        <li className={` 
+        <div className={` 
             flex flex-col items-center 
             justify-center cursor-pointer
-            ${props.className}
             `}>
           { props.icon }
         <span className={`text-xs`}>
           { props.text }
         </span>
-        </li>
+        </div>
     )
   }
   return (
@@ -29,7 +28,7 @@ export default function MenuItem(props: IMenuItemProps) {
       { props.url ? (
         <Link href={props.url} 
           className={`
-            hover:bg-gray-200 flex flex-col  
+            dark:hover:bg-gray-700 hover:bg-gray-200 flex flex-col  
               items-center justify-center h-20 w-20`
           }
           >
