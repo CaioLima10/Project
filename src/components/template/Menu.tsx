@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import MenuItem from './MenuItem'
 import { Home, Settings, Bell, Logout } from '../icons'
@@ -11,7 +13,12 @@ export default function Menu() {
         <MenuItem icon={Bell} url='/notifications' text='notificações'/>
       </ul>
       <ul >
-        <MenuItem icon={Logout} url='/' text='Sair'/>
+        <MenuItem 
+          icon={Logout} 
+          onClick={() => console.log('logout')} 
+          text='Sair'
+          className={` text-red-600 hover:bg-red-600 hover:text-zinc-100 p-3 `}
+          />
       </ul>
     </aside>
   )
