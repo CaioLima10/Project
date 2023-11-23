@@ -17,7 +17,7 @@ export default function Menu() {
           icon={Logout} 
           onClick={() => console.log('logout')} 
           text='Sair'
-          className={` text-red-600 hover:bg-red-600 hover:text-zinc-100 p-3 `}
+          className={` text-red-600 hover:bg-red-500 hover:text-zinc-100 p-3 `}
           />
       </ul>
     </aside>
