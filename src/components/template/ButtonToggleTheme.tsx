@@ -14,11 +14,11 @@ export default function ButtonToggleTheme( props: IButtonToggleThemeProps ) {
         onClick={props.toggleTheme}
     >
         {  props.theme === 'dark' ? (
-        <div className={` flex items-center justify-start bg-slate-300 border-2 border-blue-950 rounded-full  text-zinc-300`} onClick={props.toggleTheme}>
+        <div className={` flex items-center justify-start bg-slate-300 border-2 border-slate-300 rounded-full  text-zinc-300`} onClick={props.toggleTheme}>
             <Image src={Moon} alt="Lua"/>
         </div>        
         ) : (
-        <div className={` flex items-center justify-end w-full  `} onClick={props.toggleTheme}>
+        <div className={` flex items-center justify-end w-full `} onClick={props.toggleTheme}>
             <Image src={Sun} alt="Sol"/>
         </div>    
         ) }

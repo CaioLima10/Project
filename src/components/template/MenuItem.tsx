@@ -17,9 +17,9 @@ export default function MenuItem(props: IMenuItemProps) {
             justify-center cursor-pointer
             `}>
           { props.icon }
-        <span className={`text-xs`}>
-          { props.text }
-        </span>
+          <span className={`text-xs`}>
+            { props.text }
+          </span>
         </div>
     )
   }

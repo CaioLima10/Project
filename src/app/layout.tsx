@@ -17,8 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <AppProvider name="passado provider">
-        <body className={inter.className}>{children}</body>
+      <AppProvider>
+        <body className={inter.className}>
+          {children}
+        </body>
       </AppProvider>
     </html>
   )
