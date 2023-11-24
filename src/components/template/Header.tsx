@@ -15,11 +15,13 @@ export default function Header(props : IHeaderProps) {
   const { toggleTheme , theme  } = UseAppData()
 
   return (
-    <div>
+    <div className={` flex flex-col w-full `}>
+      <div className={` flex w-full items-end justify-end `}>
       <ButtonToggleTheme 
         theme={theme} 
         toggleTheme={toggleTheme} 
         />
+      </div>
         <Title title={props.title} subtitle={props.subtitle} />
     </div>
   )

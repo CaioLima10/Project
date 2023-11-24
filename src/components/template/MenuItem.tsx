@@ -24,7 +24,7 @@ export default function MenuItem(props: IMenuItemProps) {
     )
   }
   return (
-    <li onClick={props.onClick}>
+    <div onClick={props.onClick}>
       { props.url ? (
         <Link href={props.url} 
           className={`
@@ -37,6 +37,6 @@ export default function MenuItem(props: IMenuItemProps) {
       ): (
             RenderContentLink()
       ) }
-    </li>
+    </div>
   )
 }
