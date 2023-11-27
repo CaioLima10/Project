@@ -3,9 +3,11 @@
 import AuthInput from "@/components/auth/AuthInput";
 import { Attention } from "@/components/icons";
 import { useState } from "react";
+import { UseAuth } from "@/data/hooks/UseAuth";
 
 export default function Login() {
 
+    const { user , loginGoogle } = UseAuth()
     const [ error , setError ] = useState(null)
     const [ email , setEmail ] = useState('')
     const [ password , setPassword ] = useState('')
@@ -27,6 +29,7 @@ export default function Login() {
             IsError("Ocorreu erro no Cadastro!")
         }
     }
+
     
   return (
 
@@ -80,13 +83,13 @@ export default function Login() {
                 </div>
 
             <button 
-                onClick={handleClick}
+                onClick={loginGoogle}
                 className={` 
                     w-full bg-red-500 hover:bg-red-400 
                     text-zinc-100 rounded-lg px-4 py-3 mt-6
                 `}
                 >
-                    Entrar com Google
+                    Entrar com Google   
             </button>
         </div>
 

@@ -7,6 +7,6 @@ export default function Notifications() {
       title='Notificações' 
       subtitle='Aqui você irá gerenciar as suas notificações'
     >
-    </TemplateLayout>
+    </TemplateLayout> 
   )
 }
